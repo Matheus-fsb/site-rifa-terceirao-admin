@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: "Podkova";
+    color: rgb(242, 244, 246);
+}
+
+body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#central-box {
+    border-radius: 2%;
+    background-color: rgba(34, 33, 35, 0.9);
+    width: 40%;
+    max-width: 1000px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#div-logo-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#div-logo-top img {
+    width: 25%;
+}
+
+#div-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+#div-title p {
+    text-align: center;
+    margin: 0px;
+}
+
+.dynamic-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    padding: 20px;
+    height: auto;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fbfbfb;
+    border-radius: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: rgba(34, 33, 35, 0.9);
+    font-size: 20px;
+}
+
+.number:hover {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#pc {
+    width: 20%;
+    padding: 5px;
+}
+
+/* Ajustes para telas de 1300px a 800px (tablets) */
+@media (max-width: 1300px) and (min-width: 800px) {
+    #central-box {
+        width: 80%; /* Aumenta a largura da caixa */
+    }
+
+    .dynamic-grid {
+        grid-template-columns: repeat(7, 1fr); /* 7 colunas para tablets */
+        gap: 12px; /* Ajusta o espaçamento */
+    }
+
+    .number {
+        width: 45px; /* Aumenta os círculos */
+        height: 45px;
+        font-size: 18px; /* Aumenta o texto */
+    }
+
+    #pc {
+        width: 25%;
+    }
+}
+
+/* Ajustes para telas menores que 800px */
+@media (max-width: 800px) {
+    body {
+        background-image: none;
+        background-color: rgba(34, 33, 35, 0.9);
+    }
+
+    #central-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .dynamic-grid {
+        grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+        gap: 15px; /* Aumenta o espaçamento */
+    }
+
+    .number {
+        width: 50px; /* Aumenta os círculos */
+        height: 50px;
+        font-size: 20px; /* Texto mais legível */
+    }
+
+    #pc {
+        width: 30%;
+    }
+}
+
+/* Ajustes para telas menores que 500px */
+@media (max-width: 500px) {
+    .dynamic-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        gap: 20px; /* Mais espaçamento para evitar sobreposição */
+    }
+
+    .number {
+        width: 60px; /* Círculos maiores */
+        height: 60px;
+        font-size: 24px; /* Texto ainda mais legível */
+    }
+
+    #pc {
+        width: 50%;
+    }
+}
+
+.number.buyer-assigned {
+    background-color: #4CAF50; /* Cor de fundo verde para números com comprador */
+    color: white; /* Texto branco */
+}
+
+.number.buyer-assigned:hover {
+    background-color: #4caf4fc1; /* Cor de fundo verde para números com comprador */
+}
+
+.number.unassigned {
+    background-color: #f44336; /* Cor de fundo vermelha para números sem comprador */
+    color: white; /* Texto branco */
+}
+
+.number.unassigned:hover {
+    background-color: #f44336c0; /* Cor de fundo vermelha para números sem comprador */
+}
+
+
+

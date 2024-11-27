@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    font-family: 'Podkova';
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo escuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    /* Aplica o desfoque no fundo */
+}
+
+.modal h2 {
+    color: rgb(31, 31, 31);
+    font-size: 170%;
+}
+
+/* Conteúdo da modal */
+.modal-content {
+    background-color: rgba(247, 247, 247, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Botão de fechar */
+.close {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #606060;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: rgb(153, 153, 153);
+}
+
+
+#modal-escolha {
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#modal-escolha button {
+    width: 200px;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(31, 31, 31);
+    margin-bottom: 10px;
+    font-size: 100%;
+    transition: 0.2s;
+}
+
+#modal-escolha button:hover {
+    background-color: rgb(226, 230, 231);
+    color: rgb(31, 31, 31);
+    font-weight: 200;
+    transition: 0.2s;
+}
+
+#modal-cadastro-novo form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#modal-cadastro-novo form label {
+    color: rgb(31, 31, 31);
+}
+
+#modal-cadastro-novo form input {
+    width: 100%;
+    height: 30px;
+    color: rgb(31, 31, 31);
+    font-size: 100%;
+    border: none;
+    background-color: rgb(163, 166, 168);
+    padding-left: 5px;
+}
+
+#modal-cadastro-existente form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#modal-cadastro-existente form label {
+    color: rgb(31, 31, 31);
+}
+
+#modal-cadastro-existente form input {
+    width: 100%;
+    height: 30px;
+    color: rgb(31, 31, 31);
+    font-size: 100%;
+    border: none;
+    background-color: rgb(163, 166, 168);
+    padding-left: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(31, 31, 31);
+    margin-bottom: 10px;
+    font-size: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(148, 148, 148);
+    color: rgb(31, 31, 31);
+    font-weight: 200;
+}
+
+em {
+    margin: 0px;
+    font-size: 130%;
+    color: rgb(138, 138, 138)
+}
+
+#modal-name, #modal-tel {
+    font-size: 130%;
+    color: rgb(31, 31, 31);
+}
+
+button {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(31, 31, 31);
+    margin-bottom: 10px;
+    font-size: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: rgb(148, 148, 148);
+    color: rgb(31, 31, 31);
+    font-weight: 200;
+}
+
+#login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#login-form label{
+    color: rgb(31, 31, 31);
+}
+
+#login-form input{
+    width: 100%;
+    height: 30px;
+    color: rgb(31, 31, 31);
+    font-size: 100%;
+    border: none;
+    background-color: rgb(163, 166, 168);
+    padding-left: 5px;
+}
+
+#deslogar{
+    background-color: aliceblue;
+    color: rgb(31, 31, 31);
+    transition: 0.2s;
+}
+
+#deslogar:hover{
+    background-color: rgb(31, 31, 31);
+    color: aliceblue;
+    transition: 0.2s;
+}
